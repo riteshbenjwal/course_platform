@@ -1,0 +1,48 @@
+{% extends "templates/store/base.html" %}
+
+{% block body %}
+<section class="hero is-large is-link">
+    <div class="hero-body">
+        <p class="title">
+           Course Creation Platform
+        </p>
+        <p class="subtitle">
+           Best Courses from Best Educators
+        </p>
+    </div>
+</section>
+<main class="container is-max-widescreen">
+    <h3 class="title mt-5">Full Collection</h3>
+
+    <div class="columns my-6">
+        {% for course in courses %}
+        <div class="column is-one-fifth">
+            <a href="{{ course.route }}">
+                <div class="card">
+                    <div class="card-image">
+                        <figure class="card-cover-image">
+                            <img src="https://miro.medium.com/v2/resize:fit:1200/1*y6C4nSvy2Woe0m7bWEn4BA.png" alt="Cover image">
+                        </figure>
+                    </div>
+                    <div class="card-content">
+                        <div class="media">
+                            <div class="media-content">
+                                <p class="title is-4">{{ course.title }}</p>
+                                <p class="subtitle is-6">by {{ course.publisher_creator }}</p>
+                            </div>
+                        </div>
+
+                        <div class="content">
+                            445 downloads
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+        </div>
+        {% endfor %}
+    </div>
+</main>
+
+
+{% endblock %}

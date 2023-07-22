@@ -1,0 +1,18 @@
+{% extends "templates/web.html" %}
+
+{% block page_content %}
+<h3>Title: </h3>
+<p>{{ title }}</p>
+<h3>Description:</h3>
+<p>{{description}}</p>
+<h3>Price: </h3>
+<p>{{price}}</p>
+<h3>Publisher</h3>
+<p>{{
+    publisher.creator    
+}}</p>
+<h3>Category</h3>
+<p>{{category.title}}</p>
+{% endblock %}
+
+<!-- this is a sample default web page template -->
