@@ -5,5 +5,5 @@
 from frappe.model.document import Document
 
 
-class Videos(Document):
+class Video(Document):
 	pass

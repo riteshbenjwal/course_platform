@@ -5,5 +5,5 @@
 from frappe.tests.utils import FrappeTestCase
 
 
-class TestVideos(FrappeTestCase):
+class TestVideo(FrappeTestCase):
 	pass

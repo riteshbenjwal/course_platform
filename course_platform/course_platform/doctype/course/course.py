@@ -13,5 +13,8 @@ class Course(WebsiteGenerator):
 		context.category = frappe.db.get_value(
             "Category", self.category, ['title'], as_dict=True
         )
-	
+
+
+
+
 

@@ -16,7 +16,8 @@
   "image",
   "route",
   "category",
-  "publisher"
+  "publisher",
+  "user"
  ],
  "fields": [
   {
@@ -68,13 +69,20 @@
    "label": "Publisher",
    "options": "Publisher",
    "reqd": 1
+  },
+  {
+   "fieldname": "user",
+   "fieldtype": "Link",
+   "label": "user",
+   "options": "User",
+   "reqd": 1
   }
  ],
  "has_web_view": 1,
  "index_web_pages_for_search": 1,
  "is_published_field": "is_published",
  "links": [],
- "modified": "2023-07-22 00:54:21.755147",
+ "modified": "2023-07-23 00:12:55.554638",
  "modified_by": "Administrator",
  "module": "course-platform",
  "name": "Course",

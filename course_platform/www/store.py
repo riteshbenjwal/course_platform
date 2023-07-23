@@ -13,5 +13,5 @@ def get_context(context):
 			"category.title as category_title"
 
 		],
-		# filters={"is_published": True},
+		filters={"is_published": True},
 	)

@@ -1,18 +1,40 @@
 {% extends "templates/web.html" %}
 
 {% block page_content %}
-<h3>Title: </h3>
-<p>{{ title }}</p>
-<h3>Description:</h3>
-<p>{{description}}</p>
-<h3>Price: </h3>
-<p>{{price}}</p>
-<h3>Publisher</h3>
-<p>{{
-    publisher.creator    
-}}</p>
-<h3>Category</h3>
-<p>{{category.title}}</p>
+<div style="display: flex;">
+    <div>
+        <h3>Title: </h3>
+        <p>{{ title }}</p>
+        <h3>Description:</h3>
+        <p>{{description}}</p>
+        <h3>Price: </h3>
+        <p>{{price}}</p>
+        <h3>Publisher</h3>
+        <p>{{
+            publisher.creator
+            }}</p>
+        <h3>Category</h3>
+        <p>{{category.title}}</p>
+    </div>
+    <div style="margin-left: 250px;">
+        <h3>Videos</h3>
+        {% set videos = frappe.get_list("Video", filters={"course": doc.name}, fields=["title","description"]) %}
+        <ul>
+            {%for video in videos%}
+
+            <li>Title: {{video.title}}, Description: {{video.description}}</li>
+            {% endfor %}
+        </ul>
+        <div  style="margin-top: 30px; ">
+            <a href="" >Add New </a>
+          </div>
+    </div>
+</div>
+<script>
+    // Log videos in the browser's console
+    const videosData = videos;
+    console.log("Videos:", videosData);
+</script>
 {% endblock %}
 
 <!-- this is a sample default web page template -->
